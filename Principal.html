@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pokemon</title>
+    <!-- iniciando primeiramente com o STYLE para definir imagens, posicionamentos e sobreposições -->
+    <style>
+        body {
+            background-image: url('./mapa de fundo hoenn.webp'); /* imagem retirada da pasta */
+            background-size: cover; /* faz com que a imagem cubra toda a resolução da página */
+            background-repeat: no-repeat; /* faz com que a imagem não se repita e sim se estenda por toda a página */
+            color: rgb(204, 218, 13); /* Cor do texto */
+            position: relative; /* Para o overlay */
+            margin: 0; /* Remove margem padrão */
+            height: 100vh; /* Faz a imagem ocupar a altura total da janela */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+            z-index: 1; /* Fica acima da imagem de fundo */
+        }
+        h1, p {
+            position: relative; /* Para o texto ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+            text-align: center; /* Centraliza o texto */
+        }
+        img {
+            position: relative; /* Para a imagem ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+        }
+    </style>
+</head>
+
+<body>
+
+ 
+    <div class="overlay"></div>
+    
+    <h1>Olá</h1>
+    <p>Este é um site projeto que fala um pouco sobre o mundo Pokémon (Jogos).</p>
+    <div style="text-align: center;">
+        <img src="logopokemon.jpg" alt="Descrição" style="width: 300px; height: auto;">
+    </div>
+    
+    <p style ="text-align:center">Pokémon é uma franquia de mídia <br>
+        que pertence a The Pokémon Company,<br>
+        tendo sido criada por Satoshi Tajiri em 1995.<br>
+        Ela é centrada em criaturas ficcionais chamadas "Pokémon",<br>
+        que os seres humanos capturam e os treinam <br> 
+        para lutarem entre si com seus ataques de diversos tipos.</p>
+    
+    <p style ="text-align:center">A franquia começou com um par de jogos lançados para o Game Boy original,<br>
+        desenvolvidos pela Game Freak e publicados pela Nintendo. Atualmente,<br>
+        a franquia se estende em jogos, cartas colecionáveis,<br>
+        série de televisão, além de filmes, mangás e brinquedos.<br>
+        Pokémon é a segunda franquia de mídia de jogos<br>
+        mais bem-sucedida e lucrativa do mundo,<br>
+        atrás da franquia Mario que também pertence à Nintendo.</p>
+
+    <!-- Link para a nova página -->
+    <p style="text-align:center">
+        <a href="regioes.html" style="color: rgb(204, 218, 13); text-decoration: none;">Clique aqui para continuar</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, helvetica;
+    background-image: url('./mapa de fundo hoenn.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(204, 218, 13);
+    position: relative;
+    margin: 0;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+h1, p {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.imagem-container, .imagem-container2 {
+    position: absolute;
+    top: 325px;
+    z-index: 2;
+}
+
+.imagem-container {
+    left: 50px;
+}
+
+.imagem-container img,
+.imagem-container2 img {
+    width: 350px;
+    height: auto;
+}
+
+.legenda, .legenda2 {
+    text-align: center;
+    color: rgb(204, 218, 13);
+}
+
+.imagem-container2 {
+    left: 700px;
+}
+
+a {
+    color: rgb(204, 218, 13);
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona underline ao passar o mouse */}

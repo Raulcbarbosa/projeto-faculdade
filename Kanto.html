@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pokemon</title>
+    <!-- iniciando primeiramente com o STYLE para definir imagens, posicionamentos e sobreposições -->
+    <style>
+        body {
+            background-image: url('./mapa de fundo hoenn.webp'); /* imagem retirada da pasta */
+            background-size: cover; /* faz com que a imagem cubra toda a resolução da página */
+            background-repeat: repeat; /* faz com que a imagem não se repita e sim se estenda por toda a página */
+            color: rgb(204, 218, 13); /* Cor do texto */
+            position: relative; /* Para o overlay */
+            margin: 0; /* Remove margem padrão */
+            height: 100vh; /* Faz a imagem ocupar a altura total da janela */
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+            z-index: 1; /* Fica acima da imagem de fundo */
+        }
+        h1, p {
+            position: relative; /* Para o texto ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+            text-align: center; /* Centraliza o texto */
+        }
+        img {
+            position: relative; /* Para a imagem ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    
+    <h1>Olá, bem vindo a pagina de Kanto.</h1>
+    <p>Aqui aprenderemos um pouco sobre a historia da região e alguns pokemons da area.</p>
+    <div style="text-align: center;">
+        <img src="kantomapa.jpg" alt="Descrição" style="width: 500px; height: auto;">
+    </div>
+    
+    <p style ="text-align:center">Kanto (em japonês: カントー地方, Kantō-chihō) é um país ou região fictícia da série Pokémon.<br>
+         Sua geografia é baseada na região de Kanto, uma região da ilha de Honshu, no Japão, de onde vem seu nome.<br>
+          É possível notar que as formações de baía, vistas no mapa do jogo, e as formações reais de Sagami Bay, Suruga Bay e a Baía de Tokyo são semelhantes.<br><br><br>
+
+        Ao sul de Kanto estão localizadas as Ilhas Sevii e as Ilhas Laranja.<br>
+         Hoenn, introduzido em Pokémon Ruby, Sapphire e Emerald, é supostamente localizado a seu sudoeste.<br>
+          A norte localiza-se Sinnoh, e as regiões de Unova e Kalos encontram-se a oeste de Johto e Kanto.<br>
+           A região de Alola, um arquipélago, localiza-se no sudeste do país.</p>
+    
+    <p style ="text-align:center">Kanto é o cenário da primeira geração de jogos e pode ser explorado nas Gerações II, III, IV e VII.<br>
+
+        O Professor Oak é o Professor Pokémon residente e oferece aos Treinadores Pokémon uma escolha entre Bulbasaur, Charmander ou Squirtle como seu primeiro Pokémon parceiro.<br>
+         Em Pokémon Yellow, Oak pretendia dar ao jogador um Eevee, mas após seu neto Blue pegá-lo, ele dá ao jogador um Pikachu que ele havia acabado de capturar.<br>
+          Em Pokémon: Let's Go, Pikachu!, o jogador escolhe Pikachu, enquanto em Pokémon: Let's Go, Eevee!, o jogador escolhe Eevee.<br>
+           Nos jogos, o jogador começa sua jornada em Pallet Town e a termina no Indigo Plateau.<br>
+        
+        A arte dos primeiros jogos retrata Kanto como uma região de pradaria.<br> A partir da Geração III, é mostrado com uma cobertura arbórea mais densa.<br>
+        
+        Todas as cidades em Kanto são nomeadas após cores, com exceção de Pallet Town, que se refere a uma paleta, significando uma gama de cores.<br> Ao contrário de todas as outras regiões, o nome fictício de Kanto reflete seu nome no mundo real.
+              <h1 style="position: relative; z-index: 3; text-align: center;">História</h1>
+                
+                <p style="text-align:center">Kanto, região com muitos Pokémon, conta com grandes pesquisadores que utilizam da tecnologia para obter alguns novos.<br>
+                     Além de terem conseguido clonar Mew, porém em uma versão mais poderosa que passa a ser chamada de Mewtwo, conseguiram também criar o Porygon e reviver fósseis de Omanyte e Kabuto.<br>
+                      Nos jogos, seguimos como Red (Garoto) / Leaf (Garota) e obtemos o primeiro monstrinho no laboratório do professor Carvalho, tendo o direito de escolher entre os três oferecidos.<br>
+                       Antes de sair, o professor lhe entrega a Dex e pede ajuda para coletar dados dos Pokémon, e assim você parte em uma jornada capturando novos Pokémon, lutando contra outros treinadores, tentando intervir nos planos malignos da equipe Rocket e, ao mesmo tempo, conseguindo as 8 insígnias necessárias para participar da Liga, onde você precisa derrotar a Elite 4.<br>
+                        Após os quatro membros serem derrotados, você ainda precisará derrotar o campeão para que possa entrar no Hall da Fama.<br>
+                     A Elite 4 de Johto é no Planalto Indigo também, fazendo com que os jogadores saiam de Johto e vão para Kanto buscar a vitória na liga.</p>
+
+
+                       <h1 style="position: relative; z-index: 3; text-align: center;">Pokémons</h1>
+                       <p style="text-align:center">Charmander.
+                        <div style="text-align: center;">
+                            <img src="charmander.png" alt="Descrição" style="width: 150px; height: auto;">
+                             <p style="text-align:center">Em japonês, ヒトカゲ (Hitokage) significa ao pé da letra "Figura sombria", mas por outro lado, a tradução atribuída a Hitokage é "Hi" (fogo) e "Tokage" (salamandra). Ficando assim, algo como "Salamandra de Fogo".<br>
+                                 No inglês, o nome é Charmander. "Char" vem de carbonizar ou queimar e "Mander" que vem de "Salamander", que significa salamandra. Ficando assim, quase igual ao nome japonês, "Salamandra Carbonizadora" ou "Salamandra que queima".<br>
+                                  Charmander é descrito como o "Lizard Pokémon" ou Pokémon Lagarto. Charmander tem na ponta de sua cauda uma pequena chama que é a fonte de seus poderes e que queima intensamente, sem parar.<br>
+                                   Dizem que o humor de um Charmander é medido de acordo com a intensidade de sua chama. No Animê, Brock relata que esse Pokémon poderia morrer se o fogo de sua cauda se apagasse, entretanto, em um outro episódio, Delia Ketchum, mãe de Ash, afirma que ele só ficaria impossibilitado de utilizar seus poderes.<br>
+                                 Por esse motivo, o conceito da chama da cauda de Charmander é contraditório e incerto.
+                                      
+                                    O pokémon possui duas evoluções chamadas respectivamente de Charmeleon e Charizard.<br><br><br>
+                                      <img src="charmanderevolucao.png" alt="Descrição" style="width: 200; height: auto;">
+                        </div>
+
+                        <p style="text-align:center"><br><br><br>Bulbassauro.
+                            <div style="text-align: center;">
+                                <img src="bulbassauro.jpg" alt="Descrição" style="width: 150px; height: auto;">
+                                 <p style="text-align:center">Bulbasaur (フシギダネ Fushigidane?), chamado de Bulbassauro em português brasileiro,[1] é uma espécie fictícia pertencente à franquia Pokémon da Nintendo. <br>
+                                     Apareceu pela primeira vez em 1996 nos jogos Pocket Monsters Red & Green, levados ao ocidente como Pokémon Red & Blue. <br>
+                                      É um dos iniciais de Kanto, junto com Charmander, do tipo fogo, e Squirtle, do tipo água. <br>
+                                       Bulbasaur é dos tipos Planta e Veneno, notoriamente percebível por conta da grande planta em suas costas e de sua coloração verde-água. <br>
+                                        Sua classificação na Pokédex Nacional, Pokédex que merge todos os Pokémon de todas as regiões em uma, é #001.[2]
+                                         <br> <br> Bulbasaur é um dos Pokémon mais famosos de todos os tempos, tendo ganhado diversos brinquedos, pelúcias, fichas, cartas de TCG e até mesmo uma moeda comemorativa na ilha de Niue.[3]
+
+                                    Evolução:<br>
+                                    
+                                    Bulbassauro evolui para Ivyssauro no nível 16.<br>
+                                    Ivysaur é um pouco maior que Bulbasaur e apresenta uma flor maior e mais desenvolvida em suas costas. Sua coloração verde se intensifica, e suas patas se tornam mais robustas. <br>
+                                    Ivysaur se torna mais independente e territorial. Embora continue a ser amigável, ele pode ser mais protetor em relação ao seu espaço e às plantas ao seu redor. É mais ativo durante o dia, buscando a luz do sol. <br>
+                                    Este estágio mantém a conexão com a natureza, mas mostra um aumento na determinação. Ivysaur é curioso e frequentemente explora seu ambiente em busca de novas plantas e recursos. <br>
+                                    
+                                    Ivyssauro evolui para Venusaur no nível 36.<br>
+                                    Aparência: Venusaur é significativamente maior e possui uma grande flor aberta em suas costas. Suas cores são mais vibrantes, com tons de verde e rosa. Ele tem uma aparência majestosa e imponente. <br>
+                                    Venusaur é mais calmo e sereno, mas também se torna um defensor feroz de seu território. Ele é capaz de se comunicar com outras plantas e Pokémon, estabelecendo uma harmonia em seu ambiente. <br>
+                                    Neste estágio, Venusaur se torna um verdadeiro guardião da natureza. Ele é um símbolo de força e estabilidade, frequentemente buscando proteger ecossistemas e preservar a flora ao seu redor. <br><br><br>                                    
+                                    
+                                    <img src="bulbasaurevolucao.png" alt="Descrição" style="width: 200; height: auto;">
+                                    </div>
+
+                       </p>
+
+                       <p style="text-align:center"><br><br><br>Squirtle.
+                        <div style="text-align: center;">
+                            <img src="squirtle.png" alt="Descrição" style="width: 150px; height: auto;">
+                             <p style="text-align:center">Squirtle é um pequeno Pokémon com corpo azul, um casco marrom e grandes olhos redondos. Seu formato é arredondado, e ele tem uma cauda que se enrola para trás. <br><br>
+                                Squirtle é conhecido por ser brincalhão e enérgico. Ele gosta de nadar e é muitas vezes encontrado em ambientes aquáticos. Além disso, é bastante sociável e forma laços fortes com seus treinadores e outros Pokémon. <br><br>
+                                Este Pokémon é curioso e aventureiro, sempre em busca de novas experiências. Sua natureza amigável o torna fácil de treinar e popular entre os treinadores iniciantes. <br><br> 
+                                Wartortle é um pouco maior que Squirtle, com orelhas mais longas e uma cauda mais volumosa. Seu casco se torna mais robusto, e ele apresenta uma pelagem mais clara nas patas. <br><br>
+                                Wartortle é mais sério e protetor em relação ao seu território. Embora ainda tenha um lado brincalhão, ele se torna mais cauteloso e maduro. É conhecido por nadar rapidamente e usar suas habilidades aquáticas em combate. <br><br>
+                                Este estágio demonstra uma conexão mais profunda com a água e a natureza. Wartortle é leal e disposto a defender aqueles que ama, tornando-se um verdadeiro amigo e aliado. <br><br>
+                                Blastoise
+                                Blastoise é um grande Pokémon com um casco imponente e canhões de água saindo de seus ombros. Sua coloração é um azul mais escuro, e sua presença é bastante majestosa. <br><br>
+                                 Blastoise é calmo e confiante. Ele se torna um defensor feroz de seu território e usa suas habilidades para proteger outros Pokémon e ambientes aquáticos. Sua força e poder fazem dele um oponente respeitado.
+                                 <br><br>Neste estágio, Blastoise é um verdadeiro guardião das águas. Ele é sábio e experiente, frequentemente buscando formas de manter a harmonia em seu ambiente e proteger a vida aquática. <br><br><br>
+
+
+                                       
+
+                                       <img src="squirtleevolucao.png" alt="Descrição" style="width: 200; height: auto;">
+                                    </div>              
+
+                                    <p style="text-align:center">
+                                        <a href="regioes.html" style="color: rgb(204, 218, 13); text-decoration: none;">Clique aqui para voltar as regiões</a>
+                                    </p>
+                        
+</body>
+</html>

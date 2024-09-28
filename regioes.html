@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pokemon</title>
+    <style>
+        body {
+            background-image: url('./mapa de fundo hoenn.webp'); /* imagem retirada da pasta */
+            background-size: cover; /* faz com que a imagem cubra toda a resolução da página */
+            background-repeat: repeat; /* faz com que a imagem não se repita e sim se estenda por toda a página */
+            color: rgb(204, 218, 13); /* Cor do texto */
+            position: relative; /* Para o overlay */
+            margin: 0; /* Remove margem   */
+            height: 100vh; /* Faz a imagem ocupar a altura total da janela */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto*/
+            z-index: 1; /* Fica acima da imagem de fundo e abaixo dos mapas */
+        }
+        h1, p { 
+            position: relative; /* Para o texto ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+            text-align: center; /* Centraliza o texto */
+        }
+        .imagem-container { /* POSICIONAMENTO DA IMAGEM MAPA DE KANTO */
+            position: absolute; /* Permite posicionar a imagem com precisão */
+            top: 325px; /* Ajuste a posição vertical */
+            left: 50px; /* Ajuste a posição horizontal */
+            z-index: 2; /* Fica acima da sobreposição */
+        }
+        .imagem-container img { /* POSICIONAMENTO DA IMAGEM MAPA DE KANTO */
+            width: 350px; /* Define a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        .legenda { /* LEGENDA DA IMAGEM MAPA DE KANTO */
+            text-align: center; /* Centraliza a legenda abaixo da imagem */
+            color: rgb(204, 218, 13); /* Cor da legenda */
+        }
+
+        .imagem-container2 { /* POSICIONAMENTO DA IMAGEM MAPA DE HOENN */
+            position: absolute; /* Permite posicionar a imagem com precisão */
+            top: 325px; /* Ajuste a posição vertical */
+            left: 700px; /* Ajuste a posição horizontal */
+            z-index: 2; /* Fica acima da sobreposição */
+        }
+        .imagem-container2 img { /* POSICIONAMENTO DA IMAGEM MAPA DE HOENN */
+            width: 350px; /* Define a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        .legenda2 { /*  LEGENDA DA IMAGEM MAPA DE HOENN */
+            text-align: center; /* Centraliza a legenda abaixo da imagem */
+            color: rgb(204, 218, 13); /* Cor da legenda */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <h1>Regiões presentes nos jogos.</h1>
+    <p>Aqui, iremos apresentar algumas das regiões presentes na franquia.<br>
+     A franquia costuma lançar novos jogos com uma média de dois anos entre cada lançamento,<br>
+      Com o lançamento de cada jogo, vem a introdução de uma nova região.<br>
+       Cada região possui uma fauna específica,<br>
+        na qual determinados Pokémon só podem ser encontrados ali.<br>
+         Além disso, cada região tem seus próprios Pokémon lendários,<br>
+          que são espécies muito raras ou até mesmo únicas.<br>
+           Abaixo, estarão algumas regiões com links que levam<br>
+            às páginas das regiões selecionadas, provendo mais detalhes.
+    </p>
+
+    <div class="imagem-container">
+        <img src="kantomapa.jpg" alt="região de Kanto.">
+ 
+        <div class="legenda2"><a href="Kanto.html" style="color: rgb(204, 218, 13)">Clique aqui para vistar o mapa de Kanto.</a></div>
+    </div>
+
+    <div class ="imagem-container2">
+        <img src="mapa de fundo hoenn.webp" alt="Região de Hoenn.">
+        <div class="legenda2"><a href="Hoenn.html" style="color: rgb(204, 218, 13)">Clique aqui para vistar o mapa de Hoenn.</a></div>
+    </div>
+
+    <p><a href="Principal.html" style="color: rgb(204, 218, 13)">Voltar para a página inicial</a></p>
+</body>
+</html>

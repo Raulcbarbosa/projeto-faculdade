@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pokemon</title>
+    <!-- iniciando primeiramente com o STYLE para definir imagens, posicionamentos e sobreposições -->
+    <style>
+        body {
+            background-image: url('./mapa de fundo hoenn.webp'); /* imagem retirada da pasta */
+            background-size: cover; /* faz com que a imagem cubra toda a resolução da página */
+            background-repeat: repeat; /* faz com que a imagem não se repita e sim se estenda por toda a página */
+            color: rgb(204, 218, 13); /* Cor do texto */
+            position: relative; /* Para o overlay */
+            margin: 0; /* Remove margem padrão */
+            height: 100vh; /* Faz a imagem ocupar a altura total da janela */
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+            z-index: 1; /* Fica acima da imagem de fundo */
+        }
+        h1, p {
+            position: relative; /* Para o texto ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+            text-align: center; /* Centraliza o texto */
+        }
+        img {
+            position: relative; /* Para a imagem ficar acima do overlay */
+            z-index: 2; /* Fica acima do overlay */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    
+    <h1>Olá, bem vindo a pagina de Hoenn.</h1>
+    <p>Aqui aprenderemos um pouco sobre a historia da região e alguns pokemons da area.</p>
+    <div style="text-align: center;">
+        <img src="mapa de fundo hoenn.webp" alt="Descrição" style="width: 500px; height: auto;">
+    </div>
+    
+    <p style ="text-align:center">A região de Hoenn é uma área do mundo Pokémon.<br>
+         É conhecida por seu clima mais próximo ao tropical<br>
+          e sua geografia dividida: aproximadamente metade da região<br> é composta de terra, sendo a outra de mar.</p>
+    
+    <p style ="text-align:center">Hoenn é inspirada na principal ilha japonesa do mundo real, Kyushu.<br>
+         Os nomes da maioria das cidades em Hoenn<br>
+          são formados por duas palavras juntas<br>
+           ("Pequena Raiz", "Árvore Forte", "Porto Ardósia", "Ever Grande", etc.)<br>
+           ao invés de cores ou plantas, como foi feito em Kanto e Johto.<br>
+            O Professor Birch, da cidade de Littleroot,<br>
+             oferece os primeiros Pokémon parceiros, conhecidos como Treecko,<br>
+              Torchic ou Mudkip, para os Treinadores que estão<br> começando sua jornada nesta vasta terra.</p>
+            
+              <h1 style="position: relative; z-index: 3; text-align: center;">História</h1>
+                
+                <p style="text-align:center">Hoenn foi criada após a formação de Primal Groudon e Primal Kyogre.<br>
+                     Primal Groudon elevou as massas de terra, enquanto Primal Kyogre preencheu os mares que mais tarde se tornariam Hoenn.<br>
+                      Um encontro entre esses dois provocou uma grande batalha pela supremacia, até que Mega Rayquaza interveio, enviando Primal Groudon e Primal Kyogre para cavernas onde descansaram até serem despertados muitos anos depois, durante os eventos da Geração III ou Geração VI.<br>
+                       O movimento dos continentes por Regigigas criou Hoenn, e quando Regigigas foi colocado para dormir no Templo Snowpoint em Sinnoh, Regirock, Registeel e Regice, as chaves para despertá-lo, foram seladas em Hoenn.<br><br>
+                    Na história contemporânea, Brendan/May se mudaram para Littleroot Town em Hoenn vindo de Johto.<br> Brendan/May encontrou May/Brendan, competindo para completar o Pokédex.
+                    <br>
+                     Brendan/May salvou o Professor Birch de um Poochyena com um Torchic, Mudkip ou Treecko da bolsa do Professor Birch; como recompensa por salvá-lo, ele deu a Brendan/May um Pokédex e permitiu que eles ficassem com o Pokémon que usaram para ajudá-lo.
+                     <br> Brendan/May viajaram por Hoenn, ocasionalmente encontrando e derrotando a Equipe Aqua e a Equipe Magma.
+                     <br> A Equipe Magma e/ou a Equipe Aqua conseguiram despertar Groudon e/ou Kyogre, o que causou à região de Hoenn um clima severo de luz solar intensa, chuvas pesadas ou uma estranha mistura de ambos.
+                     <br> No entanto, Brendan/May conseguiram acalmar o Pokémon do clima ao derrotá-lo ou ao convocar Rayquaza para acalmá-lo.
+                     <br> Brendan/May então prosseguiram para vencer a Liga Pokémon e se tornar o Campeão, sendo convidados a competir na Battle Frontier.<br><br>
+                    
+                    Após se tornarem Campeões, um meteoro mudou de curso em direção a Hoenn. <br>
+                     As Key Stones de May/Brendan, Wally e Archie / Maxie foram roubadas por Zinnia em uma tentativa de convocar Rayquaza para evitar a crise.<br>
+                      Brendan/May encontraram Zinnia na Sky Pillar e convocaram com sucesso Rayquaza.<br>
+                       Brendan/May deram a Rayquaza o poder de Mega Evoluir e ele destruiu o meteoro.<br><br><br><br></p>
+
+
+                       <h1 style="position: relative; z-index: 3; text-align: center;">Pokémons</h1>
+                       <p style="text-align:center">Treecko.
+                        <div style="text-align: center;">
+                            <img src="treecko.webp" alt="Descrição" style="width: 150px; height: auto;">
+                             <p style="text-align:center">Treecko é um pequeno Pokémon reptiliano bípede e verde.<br>
+                                 Ele possui olhos amarelos com pupilas longas e estreitas.<br>
+                                  As mãos e os pés de Treecko têm três dedos cobertos por pequenas espinhos.<br>
+                                   Esses espinhos permitem que ele escale paredes verticais com facilidade.<br>
+                                    Seu estômago e garganta são vermelhos, e há uma linha atravessando seu estômago que se assemelha a um bolso.<br>
+                                     Treecko tem uma cauda grande e verde escura com dois lóbulos separados, que usa para sentir a umidade.<br>
+                                      Essa habilidade permite que ele preveja o tempo do dia seguinte.<br><br>
+
+
+                                Treecko é raramente encontrado na natureza e é mais comum em cativeiro.<br>
+                                 No entanto, quando está na natureza, Treecko vive em florestas densas.<br>
+                                  Ele faz seu lar em árvores altas e atacará qualquer um que se aproxime de seu ninho.<br>
+                                   Devido à sua natureza territorial, é conhecido como o protetor das árvores da floresta.<br>
+                                    Treecko é famoso por sua personalidade calma e serena.<br>
+                                     Ele nunca entra em pânico sob quaisquer circunstâncias, mesmo quando enfrenta um oponente maior.<br>
+                                      Recentemente, foi visto vivendo no Terrário da Blueberry Academy.<br><br><br>
+                                      
+                                    O pokémon possui duas evoluções chamadas respectivamente de Grovyle e Sceptile.<br>
+                                      <img src="evolucaotreecko.webp" alt="Descrição" style="width: 200; height: auto;">
+                        </div>
+
+                        <p style="text-align:center"><br><br><br>Torchic.
+                            <div style="text-align: center;">
+                                <img src="torchic.png" alt="Descrição" style="width: 150px; height: auto;">
+                                 <p style="text-align:center">Torchic é um Pokémon do tipo Fogo, conhecido por ser o Pokémon inicial da região de Hoenn.<br>
+                                     Ele se parece com um pequeno pintinho laranja e possui características adoráveis, como um bico pequeno e penas fofas.<br>
+                                      Torchic é conhecido por sua personalidade animada e seu desejo de se tornar mais forte.<br><br>
+
+                                    Evolução:<br>
+                                    
+                                    Torchic evolui para Combusken no nível 16.<br>
+                                     Combusken é um Pokémon de tipo Fogo/Lutador, adquirindo uma aparência mais robusta e ágil.<br>
+                                      Ele se destaca por suas habilidades em combate e pode usar uma variedade de ataques, incluindo movimentos de fogo e de luta.<br><br>
+                                    
+                                    Combusken evolui para Blaziken no nível 36.<br>
+                                     Blaziken é um Pokémon poderoso, também do tipo Fogo/Lutador.<br>
+                                      Ele é conhecido por sua velocidade e força em batalha, podendo realizar ataques de fogo intensos e golpes de luta impressionantes.<br>
+                                       Blaziken é famoso por seu estilo de combate acrobático e é um favorito entre os treinadores.<br><br><br>
+
+                                    <img src="torchievolucao.jpg" alt="Descrição" style="width: 200; height: auto;">
+                                    </div>
+
+                       </p>
+
+                       <p style="text-align:center"><br><br><br>Torchic.
+                        <div style="text-align: center;">
+                            <img src="mudkip.png" alt="Descrição" style="width: 150px; height: auto;">
+                             <p style="text-align:center">Descrito como "Mud Fish Pokémon" ou Pokémon Peixe de Lama, Mudkip é um Pokémon quadrúpede.<br>
+                                 É azul e possui três barbatanas nas guelras, chamativas e pontudas, na cor laranja.<br>
+                                  Sua cabeça suporta uma espécie de "radar" para identificar as mudanças no ar e na água, e possivelmente avistar perigos.<br>
+                                   Sua cauda ajuda a impulsionar a água enquanto nada, trazendo bastante velocidade.<br>
+                                    Embaixo d'água, ele utiliza suas guelras laranjas para respirar.<br>
+                                    É muito forte e, por isso, enfrenta grupos de Pokémon facilmente e domina seus adversários destemidamente.<br>
+                                     Ele é conhecido por ser um Pokémon anfíbio e por viver tanto na água quanto no solo, especialmente na lama.<br>
+                                      Mudkip dorme, enterrando-se na lama à beira da água para ficar entre os dois ambientes e equilibrar a temperatura do corpo.<br>
+                                    
+                                      <br>Evolução.
+
+                                      No nivel 16,quando evolui para Marshtomp, Mudkip ganha o tipo Ground.<br>
+                                       Ao invés de três barbatanas nas guelras, ele possui uma só, que é bem pontuda e fina.<br>
+                                        Conhecidos por atirar lama no inimigo, os Marshtomp são Pokémon protetores.<br> 
+                                        Vivem em pântanos, brejos e áreas alagadiças, e geralmente odeiam rios e lugares com água corrente.<br>
+                                         Como estratégia de sobrevivência, ficam escondidos na lama e submergem quando o inimigo menos espera.<br>
+                                          Em japonês, seu nome é "ヌマクロー" (Numacraw), que é uma mistura de 沼 "numa" (pântano) e ムツゴロウ "crawl" (rastejar).<br>
+                                           Logo, temos algo como "O que rasteja no pântano".<br>
+                                            Já em inglês, temos Marshtomp, que é uma combinação de "marsh" (marisma), que é um ambiente úmido, e "stomp" (pisar).<br>
+                                       Logo, temos algo adaptado como "O que pisa no Marisma", como um Pokémon que habita os marismas.<br><br><br>
+
+                                       Em seu último estágio evolutivo, Mudkip se torna Swampert, um Pokémon com aparência bruta e feroz.<br>
+                                        Swampert volta a ter três barbatanas nas guelras e ganha novamente a mesma coloração de Mudkip.<br>
+                                         Possui visão aguçada, que permite enxergar bem até em águas lamaçentas.<br>
+                                          Swampert ainda tem a habilidade de prever quando uma tempestade se aproxima usando seu "radar" e suas barbatanas.<br>
+                                           Em japonês, temos "ラグラージ" (Laglarge), que é uma combinação de "lagoon" (laguna ou charco), referindo-se à água, e "large" (largo, grande).<br>
+                                            Logo, temos algo como "O do charco grande", como um Pokémon que habita grandes charcos.<br>
+                                             Já no inglês, temos Swampert, que é uma mistura de "swamp" (pântano, brejo) e "expert" (perito, experiente).<br>
+                                             Logo, temos algo como "Perito do Pântano".<br><br><br>
+
+
+                                       
+
+                                       <img src="mudkipevolucao.png" alt="Descrição" style="width: 200; height: auto;">
+                                    </div>              
+
+                                    <p style="text-align:center">
+                                        <a href="regioes.html" style="color: rgb(204, 218, 13); text-decoration: none;">Clique aqui para voltar as regiões</a>
+                                    </p>
+                        
+</body>
+</html>
