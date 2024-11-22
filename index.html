@@ -1,72 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Pokemon</title>
-    <!-- iniciando primeiramente com o STYLE para definir imagens, posicionamentos e sobreposições -->
-    <style>
-        body {
-            background-image: url('./mapa de fundo hoenn.webp'); /* imagem retirada da pasta */
-            background-size: cover; /* faz com que a imagem cubra toda a resolução da página */
-            background-repeat: no-repeat; /* faz com que a imagem não se repita e sim se estenda por toda a página */
-            color: rgb(204, 218, 13); /* Cor do texto */
-            position: relative; /* Para o overlay */
-            margin: 0; /* Remove margem padrão */
-            height: 100vh; /* Faz a imagem ocupar a altura total da janela */
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
-            z-index: 1; /* Fica acima da imagem de fundo */
-        }
-        h1, p {
-            position: relative; /* Para o texto ficar acima do overlay */
-            z-index: 2; /* Fica acima do overlay */
-            text-align: center; /* Centraliza o texto */
-        }
-        img {
-            position: relative; /* Para a imagem ficar acima do overlay */
-            z-index: 2; /* Fica acima do overlay */
-        }
-    </style>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
-
- 
-    <div class="overlay"></div>
-    
-    <h1>Olá</h1>
-    <p>Este é um site projeto que fala um pouco sobre o mundo Pokémon (Jogos).</p>
+    <h4>Oi, entre com os dados do aluno:</h4>
     <div style="text-align: center;">
-        <img src="logopokemon.jpg" alt="Descrição" style="width: 300px; height: auto;">
+        <input type="text" id="nomeInput" placeholder="Nome do Aluno">
+        <input type="text" id="matriculaInput" placeholder="Matrícula">
+        <input type="date" id="dataNascimentoInput">
+        <input type="text" id="telefoneInput" placeholder="Telefone">
+        <select id="turnoInput">
+            <option value="">Escolha o Turno</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select>
+        <button id="adicionarBtn">Adicionar</button>
     </div>
-    
-    <p style ="text-align:center">Pokémon é uma franquia de mídia <br>
-        que pertence a The Pokémon Company,<br>
-        tendo sido criada por Satoshi Tajiri em 1995.<br>
-        Ela é centrada em criaturas ficcionais chamadas "Pokémon",<br>
-        que os seres humanos capturam e os treinam <br> 
-        para lutarem entre si com seus ataques de diversos tipos.</p>
-    
-    <p style ="text-align:center">A franquia começou com um par de jogos lançados para o Game Boy original,<br>
-        desenvolvidos pela Game Freak e publicados pela Nintendo. Atualmente,<br>
-        a franquia se estende em jogos, cartas colecionáveis,<br>
-        série de televisão, além de filmes, mangás e brinquedos.<br>
-        Pokémon é a segunda franquia de mídia de jogos<br>
-        mais bem-sucedida e lucrativa do mundo,<br>
-        atrás da franquia Mario que também pertence à Nintendo.</p>
 
-    <!-- Link para a nova página -->
-    <p style="text-align:center">
-        <a href="regioes.html" style="color: rgb(204, 218, 13); text-decoration: none;">Clique aqui para continuar</a>
-    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Matrícula</th>
+                <th>Data de Nascimento</th>
+                <th>Telefone</th>
+                <th>Turno</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaBody">
+           
+        </tbody>
+    </table>
 
+    <p id="mensagemVazia" class="empty-message">A tabela está vazia. Adicione um aluno!</p>
+
+    <script>
+        const botaoAdicionar = document.querySelector('#adicionarBtn');
+        const inputNome = document.querySelector('#nomeInput');
+        const inputMatricula = document.querySelector('#matriculaInput');
+        const inputDataNascimento = document.querySelector('#dataNascimentoInput');
+        const inputTelefone = document.querySelector('#telefoneInput');
+        const inputTurno = document.querySelector('#turnoInput');
+        const tabelaBody = document.querySelector('#tabelaBody');
+        const mensagemVazia = document.querySelector('#mensagemVazia');
+
+        botaoAdicionar.addEventListener('click', () => {
+            const nomeAluno = inputNome.value.trim();
+            const matriculaAluno = inputMatricula.value.trim();
+            const dataNascimentoAluno = inputDataNascimento.value;
+            const telefoneAluno = inputTelefone.value.trim();
+            const turnoAluno = inputTurno.value;
+
+            if (nomeAluno === "" || matriculaAluno === "" || dataNascimentoAluno === "" || telefoneAluno === "" || turnoAluno === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;  
+            }
+
+            if (!/^\d+$/.test(matriculaAluno)) {
+                alert("Insira apenas números no campo de matrícula.");
+                return;  
+            }
+
+            if (!/^\d+$/.test(telefoneAluno)) {
+                alert("Insira apenas números no campo de telefone.");
+                return;  
+            }
+
+            function formatarData(data) {
+                const dataObj = new Date(data);
+                const dia = String(dataObj.getDate()).padStart(2, '0');
+                const mes = String(dataObj.getMonth() + 1).padStart(2, '0'); 
+                const ano = dataObj.getFullYear();
+                return `${dia}/${mes}/${ano}`;
+            }
+
+            const tr = document.createElement('tr');
+            
+            const td1 = document.createElement('td');
+            td1.textContent = nomeAluno;
+            tr.appendChild(td1);
+
+            const td2 = document.createElement('td');
+            td2.textContent = matriculaAluno;
+            tr.appendChild(td2);
+
+            const td3 = document.createElement('td');
+            td3.textContent = formatarData(dataNascimentoAluno);  
+            tr.appendChild(td3);
+
+            const td4 = document.createElement('td');
+            td4.textContent = telefoneAluno;
+            tr.appendChild(td4);
+
+            const td5 = document.createElement('td');
+            td5.textContent = turnoAluno;
+            tr.appendChild(td5);
+
+            const td6 = document.createElement('td');
+            const botaoExcluir = document.createElement('button');
+            botaoExcluir.textContent = 'Excluir';
+            botaoExcluir.addEventListener('click', () => {
+                tr.remove();
+                atualizarMensagemVazia();  
+            });
+            
+            const botaoEditar = document.createElement('button');
+            botaoEditar.textContent = 'Editar';
+            botaoEditar.addEventListener('click', () => {
+                inputNome.value = nomeAluno;
+                inputMatricula.value = matriculaAluno;
+                inputDataNascimento.value = dataNascimentoAluno;
+                inputTelefone.value = telefoneAluno;
+                inputTurno.value = turnoAluno;
+                
+                tr.remove();
+                atualizarMensagemVazia();
+            });
+
+            td6.appendChild(botaoExcluir);
+            td6.appendChild(botaoEditar);
+            tr.appendChild(td6);
+
+            tabelaBody.appendChild(tr);
+
+            inputNome.value = "";
+            inputMatricula.value = "";
+            inputDataNascimento.value = "";
+            inputTelefone.value = "";
+            inputTurno.value = "";
+
+            atualizarMensagemVazia();
+        });
+
+        function atualizarMensagemVazia() {
+            if (tabelaBody.rows.length === 0) {
+                mensagemVazia.style.display = 'block';
+            } else {
+                mensagemVazia.style.display = 'none';
+            }
+        }
+
+        atualizarMensagemVazia();
+    </script>
 </body>
 </html>

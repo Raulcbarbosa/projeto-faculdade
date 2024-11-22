@@ -1,0 +1,54 @@
+body {
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button {
+    padding: 1px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.botao-acoes {
+    margin-right: 10px; 
+}
+
+.botao-editar {
+    margin-left: 10px;  
+}
+
+.empty-message {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+input:focus {
+    outline: 2px solid #007bff;
+    border-color: #007bff;
+}
